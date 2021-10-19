@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+    dosbox:
+        image: 'tjth-dosbox:latest'
+        volumes: 
+            - './games:/c/'
+            - '/tmp/.X11-unix:/tmp/.X11-unix:ro'
+        command: 'dosbox'
+        container_name: 'dosbox'
+        tty: true
